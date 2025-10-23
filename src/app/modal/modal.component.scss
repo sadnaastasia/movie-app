@@ -1,0 +1,90 @@
+.modal-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.film-title {
+  width: 80%;
+  font-family: var(--poppins-family);
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.close-button {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: rgb(201, 192, 192);
+}
+
+.modal {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 200px 1fr;
+  grid-gap: 20px;
+}
+
+.film-poster {
+  width: 200px;
+  height: 300px;
+}
+
+.film-year {
+  font-family: var(--poppins-family);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.film-genres {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+
+.film-genre {
+  padding: 5px 10px;
+  background-color: rgb(221, 182, 217);
+  border-radius: 20px;
+  font-family: var(--poppins-family);
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.film-description {
+  font-family: var(--poppins-family);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.film-rating {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-family: var(--poppins-family);
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(193, 97, 156);
+}
+
+@media (max-width: 800px) {
+  .modal {
+    grid-template-columns: 1fr;
+  }
+}

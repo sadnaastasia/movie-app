@@ -1,0 +1,26 @@
+<header class="modal-header">
+  <h2 class="film-title" mat-dialog-title>{{ data.name }}</h2>
+  <mat-dialog-actions>
+    <button class="close-button" matButton (click)="closeModal()">
+      <mat-icon fontIcon="close"></mat-icon>
+    </button>
+  </mat-dialog-actions>
+</header>
+<mat-dialog-content class="modal">
+  <img class="film-poster" [src]="data.poster" alt="film-poster" />
+  <div class="modal-main">
+    <div class="film-year">{{ data.year }}</div>
+    <ul class="film-genres">
+      @for(genre of data.genres; track $index) {
+      <li class="film-genre">{{ genre.genre }}</li>
+      }
+    </ul>
+    <p class="film-description">{{ data.description }}</p>
+    <div class="film-rating mb20">
+      <span>{{ data.rating }}</span>
+      @if(data.rating){
+      <div><mat-icon fontIcon="star"></mat-icon></div>
+      }
+    </div>
+  </div>
+</mat-dialog-content>
