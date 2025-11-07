@@ -9,7 +9,6 @@
     />
   </div>
 </header>
-<!-- <div>{{ movies$() | async | json }}</div> -->
 <main>
   @if(!input.value) {
   <div class="mb50">
@@ -18,7 +17,7 @@
       @if (!(moviesFilteredByRating$ | async)) {
       <mat-progress-bar class="progress-bar" mode="query" value="30">
       </mat-progress-bar>
-      } @else { @for (filteredMovie of (moviesFilteredByRating$|async)!.items;
+      } @else { @for (filteredMovie of (moviesFilteredByRating$|async)?.items;
       track filteredMovie.kinopoiskId) {
       <button
         class="slider-button"
@@ -125,7 +124,7 @@
       >
       </mat-progress-spinner>
     </div>
-    } @else { @for (movie of (movies$() | async)!.items; track
+    } @else { @for (movie of (movies$() | async)?.items; track
     movie.kinopoiskId) {
     <button
       class="film-button"

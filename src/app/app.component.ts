@@ -6,7 +6,7 @@ import {
   effect,
 } from '@angular/core';
 import { MoviesService } from './movies.service';
-import { AsyncPipe, JsonPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
@@ -23,7 +23,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
   selector: 'app-root',
   imports: [
     AsyncPipe,
-    JsonPipe,
     MatButtonModule,
     MatDialogModule,
     MatProgressSpinnerModule,
